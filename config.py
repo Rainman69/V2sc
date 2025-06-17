@@ -10,8 +10,8 @@ SESSION_NAME = "vpn_scanner"
 # Default scanner settings
 DEFAULT_SETTINGS = {
     "SCAN_INTERVAL": 60,  # Seconds between channel scans
-    "DELAY_BETWEEN_CHANNELS": 5,  # Seconds between scanning each channel
-    "DELAY_BETWEEN_MESSAGES": 1,  # Seconds between checking each message
+    "DELAY_BETWEEN_CHANNELS": 10,  # Seconds between scanning each channel
+    "DELAY_BETWEEN_MESSAGES": 2,  # Seconds between checking each message
     "MAX_MESSAGES_PER_SCAN": 50,  # Messages to check per channel per scan
     "ENABLED_SERVER_TYPES": ["vmess", "vless", "ss", "trojan", "wireguard", "outline"],
     "ENABLED_FILE_EXTENSIONS": [".bak", ".txt", ".npvt", ".ovpn", ".ehi", ".apk", ".conf"],
