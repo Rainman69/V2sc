@@ -1,8 +1,8 @@
 # Telegram API Configuration
 # Get these from https://my.telegram.org
-API_ID = 12345678  # Your API ID
-API_HASH = "your_api_hash_here"  # Your API Hash
-PHONE_NUMBER = "+1234567890"  # Your phone number
+API_ID = 25255297  # Your API ID
+API_HASH = "92c68d49f5d47362c8a73ef3cb769bc7"  # Your API Hash
+PHONE_NUMBER = "+989224053123"  # Your phone number
 
 # Session settings
 SESSION_NAME = "vpn_scanner"
