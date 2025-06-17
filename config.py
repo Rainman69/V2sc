@@ -1,24 +1,24 @@
 # Telegram API Configuration
-# Get these from https://my.telegram.org
-API_ID = 25255297  # Your API ID
-API_HASH = "92c68d49f5d47362c8a73ef3cb769bc7"  # Your API Hash
-PHONE_NUMBER = "+989224053123"  # Your phone number
+API_ID = 25255297
+API_HASH = "92c68d49f5d47362c8a73ef3cb769bc7"
+PHONE_NUMBER = "+989224053123"
 
 # Session settings
 SESSION_NAME = "vpn_scanner"
 
 # Default scanner settings
 DEFAULT_SETTINGS = {
-    "SCAN_INTERVAL": 60,  # Seconds between channel scans
-    "DELAY_BETWEEN_CHANNELS": 10,  # Seconds between scanning each channel
-    "DELAY_BETWEEN_MESSAGES": 2,  # Seconds between checking each message
-    "MAX_MESSAGES_PER_SCAN": 50,  # Messages to check per channel per scan
+    "SCAN_INTERVAL": 60,
+    "DELAY_BETWEEN_CHANNELS": 10,
+    "DELAY_BETWEEN_MESSAGES": 2,
+    "MAX_MESSAGES_PER_SCAN": 50,
     "ENABLED_SERVER_TYPES": ["vmess", "vless", "ss", "trojan", "wireguard", "outline"],
     "ENABLED_FILE_EXTENSIONS": [".bak", ".txt", ".npvt", ".ovpn", ".ehi", ".apk", ".conf"],
-    "FILE_FORWARDING_ENABLED": True
+    "FILE_FORWARDING_ENABLED": True,
+    "REAL_TIME_MODE": True  # New setting for real-time processing
 }
 
-# VPN server patterns
+# VPN server patterns (fixed regex patterns)
 VPN_PATTERNS = {
     "vmess": [
         r"vmess://[A-Za-z0-9+/=]+",
@@ -28,7 +28,7 @@ VPN_PATTERNS = {
         r"vless://[A-Za-z0-9+/=\-_.~]+@[^\s]+",
         r"vless://[^\s]+",
     ],
-    "shadowsocks": [
+    "ss": [  # Fixed key name
         r"ss://[A-Za-z0-9+/=]+@[^\s]+",
         r"shadowsocks://[^\s]+",
     ],
@@ -47,7 +47,7 @@ VPN_PATTERNS = {
     "proxy_links": [
         r"https://t\.me/proxy\?server=[^\s]+",
         r"tg://proxy\?server=[^\s]+",
-    ]
+    ],
 }
 
 # Command settings
@@ -63,7 +63,8 @@ COMMANDS = {
     "toggle_files": "vpn:toggle_files",
     "enable_server": "vpn:enable_server",
     "disable_server": "vpn:disable_server",
-    "restart": "vpn:restart"
+    "restart": "vpn:restart",
+    "toggle_realtime": "vpn:toggle_realtime"  # New command
 }
 
 # Storage keys
